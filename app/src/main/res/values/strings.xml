@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">parcial-compuMovil</string>
+
+    /* layouts of first activity */
+    <string name="description_imagen">foto de perfil</string>
+    <string name="string_usuario">Usuario: </string>
+    <string name="input_usuario">ingrese su usuario</string>
+    <string name="string_password">Contaseña: </string>
+    <string name="input_password">ingrese su contraseña</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="string_registrar"> <u>Registrarse</u> </string>
+
+    /* layouts of second */
+    <string name="activity2_string_usuario">Usuario: </string>
+    <string name="activity2_input_usuario">Ingrese su usuario</string>
+    <string name="activity2_string_password">Contraseña: </string>
+    <string name="activity2_input_password">Ingrese su contraseña</string>
+    <string name="activity2_string_sexo">Elija su sexo:</string>
+    <string name="rb_masculino">M</string>
+    <string name="rb_femenino">F</string>
+    <string name="rb_otro">Otro</string>
+    <string name="string_color">Color favorito</string>
+    <string name="btn_registrar">REGISTRAR</string>
+    <string name="btn_cancelar">CANCELAR</string>
+
+    /* layouts of threth  */
+    <string name="string_saludo">Hola: </string>
+    <string name="btn_restaurar">RESTAURAR</string>
+    <string name="btn_salir">SALIR</string>
+
+</resources>

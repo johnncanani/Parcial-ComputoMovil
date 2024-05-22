@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A8CA81"
+    tools:context=".Activity_Michi">
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="184dp"
+        android:backgroundTint="#000000"
+        android:onClick="salir"
+        android:text="@string/btn_salir"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TextView
+        android:id="@+id/txt_saludo"
+        android:layout_width="194dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/string_saludo"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="#000000"
+        android:onClick="restaurar"
+        android:text="@string/btn_restaurar"
+        android:textSize="20sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.401" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="363dp"
+        android:layout_height="363dp"
+        android:layout_marginTop="40dp"
+        android:background="#000000"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_saludo">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="primer_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="segundo_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="tercer_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck,VisualLintBounds" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="cuarto_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="quinto_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="sexto_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck,VisualLintBounds" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="septimo_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck,VisualLintBounds" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="octavo_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck,VisualLintBounds" />
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="noveno_boton"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                tools:ignore="KeyboardInaccessibleWidget,SpeakableTextPresentCheck,VisualLintBounds" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
