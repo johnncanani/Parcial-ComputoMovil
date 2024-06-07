@@ -184,6 +184,28 @@ public class Activity_Michi extends AppCompatActivity {
             pintar_botones_O(tv_7, tv_8, tv_9);
         }
 
+        //-> 7 forma: p2 - p5 - p8
+        if (tv_2.getText().toString().equals("X") && tv_5.getText().toString().equals("X") && tv_8.getText().toString().equals("X")) {
+            Toast.makeText(this, "Has ganado X", Toast.LENGTH_SHORT).show();
+            juego_terminado();
+            pintar_botones_X(tv_2, tv_5, tv_8);
+        } else if (tv_2.getText().toString().equals("O") && tv_5.getText().toString().equals("O") && tv_8.getText().toString().equals("O")){
+            Toast.makeText(this, "Has ganado O", Toast.LENGTH_SHORT).show();
+            juego_terminado();
+            pintar_botones_O(tv_2, tv_5, tv_8);
+        }
+
+        //-> 8 forma: p4 - p5 - p6
+        if (tv_4.getText().toString().equals("X") && tv_5.getText().toString().equals("X") && tv_6.getText().toString().equals("X")) {
+            Toast.makeText(this, "Has ganado X", Toast.LENGTH_SHORT).show();
+            juego_terminado();
+            pintar_botones_X(tv_4, tv_5, tv_6);
+        } else if (tv_4.getText().toString().equals("O") && tv_5.getText().toString().equals("O") && tv_6.getText().toString().equals("O")){
+            Toast.makeText(this, "Has ganado O", Toast.LENGTH_SHORT).show();
+            juego_terminado();
+            pintar_botones_O(tv_4, tv_5, tv_6);
+        }
+
     }
 
     public void restaurar(View view) {
