@@ -116,6 +116,7 @@ public class Activity_Michi extends AppCompatActivity {
         }
     }
 
+    //funsion para determinar al ganador
     private void determinar_ganador() {
         //formas de ganar
         //-> 1 forma: p1 - p2 - p3 *
