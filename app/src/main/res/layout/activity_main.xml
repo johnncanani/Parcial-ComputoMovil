@@ -43,6 +43,7 @@
         android:ems="10"
         android:hint="@string/input_usuario"
         android:inputType="text"
+        android:maxLength="10"
         android:textColor="#050505"
         android:textColorHint="#33691E"
         android:textSize="20sp"
@@ -110,4 +111,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="KeyboardInaccessibleWidget,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

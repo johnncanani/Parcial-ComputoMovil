@@ -2,9 +2,9 @@ package com.example.parcial_compumovil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -22,6 +22,7 @@ public class Activity_Registro extends AppCompatActivity {
     private EditText et_usuario;
     private EditText et_password;
     private RadioButton rb_m, rb_f, rb_otro;
+    private CheckBox cb_fulbol, cb_voley;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,8 @@ public class Activity_Registro extends AppCompatActivity {
         rb_m = (RadioButton) findViewById(R.id.rbt_masculino);
         rb_f = (RadioButton) findViewById(R.id.rbt_femenino);
         rb_otro = (RadioButton) findViewById(R.id.rbt_otro);
+        cb_fulbol = findViewById(R.id.cb_futbol);
+        cb_voley = findViewById(R.id.cb_voley);
 
     }
 
@@ -66,11 +69,17 @@ public class Activity_Registro extends AppCompatActivity {
         String password = et_password.getText().toString();
         String sexo = obtener_tipo_sexo();
         String color = obtener_color();
+        String deporte = obtener_deporte();
+        String respuesta_validar = Validando_datos(usuario, password, deporte);
 
-        String mensaje = "datos : " + usuario + ",  " + password + ",  " + sexo + ",  " + color;
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+        if (respuesta_validar.equals("")){
+            String mensaje = "datos : " + usuario + ",  " + password + ",  " + sexo + ",  " + color + ",  " + deporte;
+            Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
 
-        enviar_datos(usuario, password);
+            enviar_datos(usuario, password);
+        } else {
+            Toast.makeText(this, respuesta_validar, Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -84,6 +93,18 @@ public class Activity_Registro extends AppCompatActivity {
         }
         return "hay un error-sexo";
     }
+
+    private String obtener_deporte() {
+        String d = "";
+        if (cb_fulbol.isChecked()){
+            d += " futbol";
+        } else if (cb_voley.isChecked()) {
+            d += " voley";
+        }
+        return d;
+    }
+
+
 
     private String obtener_color() {
         int selecion = sp.getSelectedItemPosition() + 1;
@@ -104,5 +125,20 @@ public class Activity_Registro extends AppCompatActivity {
         enviar.putExtra("password", password);
         startActivity(enviar);
     }
+
+    private String Validando_datos(String usu, String pass, String deporte) {
+
+        if (usu.isEmpty()){
+            return "Ingrese su usuario";
+        } else if (pass.isEmpty()) {
+            return "Ingrese la contraseña";
+        } else if (deporte.isEmpty()) {
+            return "Elija un deporte";
+        } else{
+            return "";
+        }
+
+    }
+
 
 }

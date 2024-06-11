@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">parcial-compuMovil</string>
+    <string name="app_name">Mi juego</string>
 
     /* layouts of first activity */
     <string name="description_imagen">foto de perfil</string>
@@ -20,8 +20,11 @@
     <string name="rb_femenino">F</string>
     <string name="rb_otro">Otro</string>
     <string name="string_color">Color favorito</string>
+    <string name="string_deporte">Deporte favorito</string>
+    <string name="string_futbol">Futbol</string>
+    <string name="string_voley">Voley</string>
     <string name="btn_registrar">REGISTRAR</string>
-    <string name="btn_cancelar">CANCELAR</string>
+    <string name="btn_cancelar">Volver</string>
 
     /* layouts of threth  */
     <string name="string_saludo">Hola: </string>
