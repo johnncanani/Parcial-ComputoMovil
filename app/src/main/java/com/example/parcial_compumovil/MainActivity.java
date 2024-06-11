@@ -2,6 +2,7 @@ package com.example.parcial_compumovil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
         et_usu = (EditText) findViewById(R.id.txt_usuario);
         et_cont = (EditText) findViewById(R.id.txt_password);
 
+    }
+
+    //evitar que el boton de back funcione
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public void registrar(View view) {

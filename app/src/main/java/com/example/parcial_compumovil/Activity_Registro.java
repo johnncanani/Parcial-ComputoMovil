@@ -2,6 +2,7 @@ package com.example.parcial_compumovil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -49,6 +50,15 @@ public class Activity_Registro extends AppCompatActivity {
         cb_fulbol = findViewById(R.id.cb_futbol);
         cb_voley = findViewById(R.id.cb_voley);
 
+    }
+
+    //evitar que el boton de back funcione
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public void cancelar(View view) {

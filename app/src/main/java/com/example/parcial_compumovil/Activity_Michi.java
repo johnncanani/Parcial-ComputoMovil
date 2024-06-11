@@ -3,6 +3,7 @@ package com.example.parcial_compumovil;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +45,15 @@ public class Activity_Michi extends AppCompatActivity {
         tv_8 = findViewById(R.id.tv8);
         tv_9 = findViewById(R.id.tv9);
 
+    }
+
+    //evitar que el boton de back funcione
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public void salir(View view) {

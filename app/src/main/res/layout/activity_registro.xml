@@ -31,6 +31,7 @@
         android:ems="10"
         android:hint="@string/activity2_input_usuario"
         android:inputType="text"
+        android:maxLength="10"
         android:textColorHint="#33691E"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
