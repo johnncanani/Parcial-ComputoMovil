@@ -19,6 +19,7 @@ public class Activity_Michi extends AppCompatActivity {
     private TextView tv_1, tv_2, tv_3, tv_4, tv_5, tv_6, tv_7, tv_8, tv_9;
     private boolean turno = true;
     private String letra_turno = "X";
+    private int contador_X, contador_Y;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +119,7 @@ public class Activity_Michi extends AppCompatActivity {
 
     private void cambiar_turno() {
         if (turno) {
+            contador_X++;
             turno = false;
             letra_turno = "O";
         } else {

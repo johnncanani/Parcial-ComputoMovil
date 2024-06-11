@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        et_usu = (EditText) findViewById(R.id.txt_usuario);
-        et_cont = (EditText) findViewById(R.id.txt_password);
+        et_usu =  findViewById(R.id.txt_usuario);
+        et_cont =  findViewById(R.id.txt_password);
 
     }
 

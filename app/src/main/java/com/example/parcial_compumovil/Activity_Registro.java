@@ -36,17 +36,17 @@ public class Activity_Registro extends AppCompatActivity {
             return insets;
         });
 
-        sp = (Spinner) findViewById(R.id.spinner);
+        sp = findViewById(R.id.spinner);
         String[] colores = {"Rojo", "Verde", "Azul", "Rosa", "Negro"};
         ArrayAdapter<String> mi_lista_colores = new ArrayAdapter<>(this, R.layout.list_view_john, colores);
         sp.setAdapter(mi_lista_colores);
 
         //obteniendo los datos de la parte grafica
-        et_usuario = (EditText) findViewById(R.id.txt_reg_usuario);
-        et_password = (EditText) findViewById(R.id.txt_reg_pass);
-        rb_m = (RadioButton) findViewById(R.id.rbt_masculino);
-        rb_f = (RadioButton) findViewById(R.id.rbt_femenino);
-        rb_otro = (RadioButton) findViewById(R.id.rbt_otro);
+        et_usuario = findViewById(R.id.txt_reg_usuario);
+        et_password = findViewById(R.id.txt_reg_pass);
+        rb_m = findViewById(R.id.rbt_masculino);
+        rb_f = findViewById(R.id.rbt_femenino);
+        rb_otro = findViewById(R.id.rbt_otro);
         cb_fulbol = findViewById(R.id.cb_futbol);
         cb_voley = findViewById(R.id.cb_voley);
 
@@ -107,13 +107,13 @@ public class Activity_Registro extends AppCompatActivity {
     private String obtener_deporte() {
         String d = "";
         if (cb_fulbol.isChecked()){
-            d += " futbol";
-        } else if (cb_voley.isChecked()) {
-            d += " voley";
+            d = d + " futbol";
+        }
+        if (cb_voley.isChecked()) {
+            d = d + " voley";
         }
         return d;
     }
-
 
 
     private String obtener_color() {
